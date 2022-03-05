@@ -4,7 +4,7 @@ const list = [
   { label: 'Counter-Strike: Global Offensive', value: 'csgo.exe' },
   { label: 'Battlefield 4', value: 'bf4.exe' },
   { label: 'Metro Exodus', value: 'MetroExodus.exe' },
-  { label: 'Rust', value: 'Rust.exe' },
+  { label: 'Rust', value: 'RustClient.exe' },
   { label: 'Space Engineers', value: 'SpaceEngineers.exe' },
 ];
 
