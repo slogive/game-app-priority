@@ -126,9 +126,9 @@ export default function List() {
                 (ITEM: any, INDEX: number) =>
                   `Windows Registry Editor Version 5.00 \n\n${
                     ITEM.value &&
-                    `[HKEY_LOCAL_MACHINE\/SOFTWARE\/Microsoft\/Windows NT\/CurrentVersion\/Image File Execution Options\/${
+                    `[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\${
                       ITEM.value
-                    }\/PerfOptions]\n"CpuPriorityClass"=dword:00000003\n${inputs.length - 1 == INDEX ? '' : '\n'}`
+                    }\\PerfOptions]\n"CpuPriorityClass"=dword:00000003\n${inputs.length - 1 == INDEX ? '' : '\n'}`
                   }`
               )}
             </pre>
