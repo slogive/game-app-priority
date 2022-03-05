@@ -122,9 +122,12 @@ export default function List() {
 
           <div className={styles.actions}>
             <pre ref={preRef}>
+              {`Windows Registry Editor Version 5.00
+              
+              `}
               {inputs.map(
                 (ITEM: any, INDEX: number) =>
-                  `Windows Registry Editor Version 5.00 \n\n${
+                  `${
                     ITEM.value &&
                     `[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\${
                       ITEM.value
