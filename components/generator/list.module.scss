@@ -1,0 +1,165 @@
+@import '/styles/vars';
+@import '/styles/standar';
+
+.container {
+  display: grid;
+  gap: calc(#{$gap} * 2);
+  padding: $pad;
+  align-content: space-between;
+  border-radius: $radius;
+  background-color: rgb(97, 39, 156);
+
+  margin: $pad;
+
+  @media screen and (min-width: 769px) {
+    width: 60%;
+    margin: $pad auto;
+  }
+
+  h1 {
+    color: $c_white;
+    border-radius: $radius;
+    text-align: center;
+  }
+
+  h2 {
+    color: $c_white;
+  }
+
+  h1,
+  h2 {
+    @include preventSelection();
+  }
+
+  .desc {
+    color: $c_dark_charcoal;
+    background: $c_chinese_silver;
+    padding: $pad;
+    border-radius: $radius;
+    text-align: center;
+
+    @include preventSelection();
+  }
+
+  .container_form {
+    display: grid;
+    gap: $gap;
+
+    & > section {
+      .container_library {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        @media screen and (min-width: 769px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include buttons($width: 100%);
+      }
+
+      .container_custom {
+        & > div {
+          grid-template-columns: auto min-content;
+        }
+      }
+
+      display: grid;
+      gap: $gap;
+
+      @include buttons($width: 100%);
+    }
+
+    div {
+      display: grid;
+      gap: $gap;
+
+      @include inputs;
+      @include buttons;
+    }
+
+    @include buttons($width: 100%);
+  }
+
+  .container_actions {
+    display: grid;
+    gap: $gap;
+
+    .actions {
+      display: grid;
+      gap: $gap;
+
+      @media screen and (min-width: 769px) {
+        grid-template-columns: auto min-content;
+      }
+
+      pre {
+        padding: $pad;
+        // background: rgb(130, 55, 206);
+        background-color: $c_white;
+        color: $c_dark_charcoal;
+        border-radius: $radius;
+        margin: 0;
+        white-space: pre-line;
+        word-break: normal;
+      }
+
+      @include buttons($whiteSpace: true, $height: 100%, $width: 100%);
+    }
+  }
+
+  .container_instructions {
+    color: $c_dark_charcoal;
+    margin: 0;
+    line-height: 30px;
+
+    div {
+      background: $c_chinese_silver;
+      padding: $pad;
+      border-radius: $radius;
+
+      ol {
+        margin: 0;
+        padding-inline-start: $pad;
+      }
+    }
+
+    @include preventSelection();
+  }
+
+  .popout {
+    padding: $pad;
+    gap: $gap;
+    border-radius: $radius;
+    background-color: rgba($color: $c_dark_charcoal, $alpha: 1);
+    color: $c_white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+
+    span {
+      text-align: center;
+    }
+
+    @include buttons($width: 100%);
+  }
+
+  .disabled {
+    display: none;
+  }
+
+  .enabled {
+    display: grid;
+  }
+
+  footer {
+    color: $c_white;
+
+    text-align: center;
+  }
+}

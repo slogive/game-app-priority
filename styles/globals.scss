@@ -1,0 +1,25 @@
+@import '/styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --animate-duration: 100ms;
+  --animate-delay: 0ms;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  line-height: $pad;
+  background-color: $c_dark_charcoal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

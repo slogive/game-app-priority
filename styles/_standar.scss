@@ -1,0 +1,54 @@
+@import '/styles/vars';
+
+@mixin standar() {
+  padding: $pad;
+  border-radius: $radius;
+  border: none;
+  outline: none;
+}
+
+@mixin inputs() {
+  & > input {
+    background-color: $c_white;
+    @include standar();
+  }
+}
+
+@mixin buttons($whiteSpace: false, $height: min-content, $width: min-content) {
+  & > button {
+    background-color: $c_true_blue;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: $pad;
+    height: $height;
+    align-self: center;
+    justify-self: center;
+    width: $width;
+
+    @if ($whiteSpace: true) {
+      white-space: nowrap;
+    }
+
+    &:not([disabled]):hover {
+      cursor: pointer;
+      filter: invert(1);
+    }
+
+    &[disabled] {
+      background: $c_chinese_silver;
+      cursor: not-allowed;
+    }
+
+    @include standar();
+  }
+}
+
+@mixin preventSelection() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
