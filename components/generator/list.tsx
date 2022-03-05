@@ -60,7 +60,7 @@ export default function List() {
 
   return (
     <div className={styles.container}>
-      <h1>Game/App Priority</h1>
+      <h1>Games/Apps Priority&nbsp;</h1>
 
       <p className={styles.desc}>
         Grant the priority of your game/app to high even if you can&apos;t change the permissions from your task manager.
@@ -72,7 +72,7 @@ export default function List() {
         Easy Anti-Cheat blocks the possible changes through the task manager and that code from below can bypass it.
         <br />
         <br />
-        <u>Avoid add apps do not exist</u> **
+        Avoid add apps do not exist **
         <br />
         <br />
         <b>Enjoy it.</b>
